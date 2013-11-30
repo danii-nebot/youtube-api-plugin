@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Youtube api test</title>
+  <script src="http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>
+  <script src="js/plugin.js"></script>
+</head>
+<body>
+
+  <div id="ytplayer">
+    You need Flash player 8+ and JavaScript enabled to view this video.
+  </div>
+
+  <script type="text/javascript">
+
+    // configuration values to be set by final user
+    CONFIG = { userId: "final_user_id" };
+
+    // embed youtube video enabling youtube API
+    var params = { allowScriptAccess: "always" };
+    var atts = { id: "ytapiplayer" };
+    swfobject.embedSWF("http://www.youtube.com/v/mbyzgeee2mg?enablejsapi=1&version=3&playerapiid="+atts.id,
+                       "ytplayer", "560", "315", "8", null, null, params, atts);
+
+  </script>
+</body>
+</html>
